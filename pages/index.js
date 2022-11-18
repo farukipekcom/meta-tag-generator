@@ -1,6 +1,7 @@
 import InputText from "../components/input-text/input-text";
 import styles from "./index.module.css";
 import Select from "../components/select/select";
+import Textarea from "../components/textare/textarea";
 export default function Home() {
   const data = ["Lorem 1", "Lorem 2", "Lorem 3"];
   return (
@@ -16,6 +17,11 @@ export default function Home() {
           name={"title"}
         />
         <Select label={"Robots"} option={data} name={"robots"} />
+        <Textarea
+          label={"Site Description"}
+          name={"description"}
+          placeholder={"Description must be within 150 Characters"}
+        />
       </div>
     </div>
   );
