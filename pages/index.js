@@ -11,8 +11,9 @@ export default function Home() {
       </div>
       <div className={styles.right}>
         <InputText
+          label="Page Title"
           placeholder="Title must be within 70 Characters"
-          name="title"
+          name={"title"}
         />
         <Select label={"Robots"} option={data} name={"robots"} />
       </div>

@@ -1,13 +1,14 @@
 import styles from "./input-text.module.css";
-const InputText = ({ type = "text", placeholder, title }) => {
+const InputText = ({ label, type = "text", placeholder, name }) => {
   return (
     <>
-      <label htmlFor={title} className={styles.label}>
-        Site Title
+      <label htmlFor={name} className={styles.label}>
+        {label}
       </label>
       <input
         type={type}
-        name={title}
+        id={name}
+        name={name}
         placeholder={placeholder}
         className={styles.input}
       />
