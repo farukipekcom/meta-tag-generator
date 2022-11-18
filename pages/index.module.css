@@ -1,0 +1,29 @@
+.main {
+  width: 100%;
+}
+.left {
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  background-color: var(--dark);
+  border-radius: 0px 32px 32px 0px;
+  padding: 48px;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.logo {
+  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  padding-bottom: 24px;
+}
+.code {
+  background-color: #fff;
+  width: 100%;
+  height: calc(100% - 60px);
+  border-radius: 32px;
+}
+.right {
+  width: 50%;
+  padding: 48px;
+  margin-left: auto;
+}
