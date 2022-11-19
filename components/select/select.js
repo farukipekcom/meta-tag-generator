@@ -1,7 +1,7 @@
 import styles from "./select.module.css";
 const Select = ({ label, option, name }) => {
   return (
-    <>
+    <div className={styles.item}>
       <label htmlFor={name} className={styles.label}>
         {label}
       </label>
@@ -14,7 +14,7 @@ const Select = ({ label, option, name }) => {
           );
         })}
       </select>
-    </>
+    </div>
   );
 };
 
