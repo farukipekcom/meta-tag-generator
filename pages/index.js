@@ -4,7 +4,13 @@ import Select from "../components/select/select";
 import Textarea from "../components/textare/textarea";
 import InputCheckbox from "../components/input-checkbox/input-checkbox";
 import { useState } from "react";
-import { robots, charset, card_type, op_type, op_locale } from "./data.js";
+import {
+  robots,
+  charset,
+  card_type,
+  op_type,
+  op_locale,
+} from "../components/data.js";
 import Highlight from "react-highlight";
 export default function Home() {
   const [form, setForm] = useState({
