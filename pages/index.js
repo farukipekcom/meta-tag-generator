@@ -79,6 +79,14 @@ export default function Home() {
         <div className={styles.logo}>Meta Tag Generator</div>
         <div className={styles.code}>
           <Highlight className="html">{data}</Highlight>
+          <button
+            className={styles.copy}
+            onClick={() => {
+              navigator.clipboard.writeText(data);
+            }}
+          >
+            Copy
+          </button>
         </div>
       </div>
       <div className={styles.right}>
