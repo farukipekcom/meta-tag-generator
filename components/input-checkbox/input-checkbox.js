@@ -1,5 +1,5 @@
 import styles from "./input-checkbox.module.css";
-const InputCheckbox = ({ label, name }) => {
+const InputCheckbox = ({ label, name, onChange }) => {
   return (
     <>
       <label class={styles.container} htmlFor={name}>
@@ -9,6 +9,7 @@ const InputCheckbox = ({ label, name }) => {
           id={name}
           name={name}
           className={styles.checkbox}
+          onChange={onChange}
         />
         <span class={styles.checkmark}></span>
       </label>
