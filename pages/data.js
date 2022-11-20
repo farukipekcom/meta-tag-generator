@@ -12,3 +12,8 @@ export const charset = [
   "ISO-8859-1",
   "WINDOWS-1252",
 ];
+export const card_type = [
+  "-- Select --",
+  "Summary",
+  "Summary with Large Image",
+];

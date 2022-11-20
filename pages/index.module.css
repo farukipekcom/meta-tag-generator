@@ -34,6 +34,14 @@
   font-weight: 700;
   color: var(--dark);
 }
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 48px;
+  margin-bottom: 0px;
+  line-height: 1em;
+}
 .section {
   display: flex;
   flex-direction: column;
