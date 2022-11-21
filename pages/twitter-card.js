@@ -56,7 +56,7 @@ const TwitterCard = () => {
       <Header />
       <div className={styles.page}>
         <div className={styles.main}>
-          <div className={styles.title}>Meta Tags</div>
+          <div className={styles.title}>Twitter Card</div>
           <div className={styles.form}>
             <Select
               label={"Twitter Card Type"}

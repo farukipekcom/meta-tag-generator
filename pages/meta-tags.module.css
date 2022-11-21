@@ -1,3 +1,7 @@
+.page {
+  display: flex;
+  width: 100%;
+}
 .main {
   background-color: var(--background);
   min-width: calc(50% - 150px);

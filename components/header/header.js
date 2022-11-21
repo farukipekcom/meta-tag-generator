@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./header.module.css";
 const Header = () => {
   return (
@@ -16,15 +17,15 @@ const Header = () => {
         <span className={styles.title}>Meta Tags Generator</span>
       </div>
       <div className={styles.menu}>
-        <a href="" className={styles.item}>
+        <Link href="/meta-tags" className={styles.item}>
           Meta Tags
-        </a>
+        </Link>
         <a href="" className={styles.item}>
           Open Graph
         </a>
-        <a href="" className={styles.item}>
+        <Link href="/twitter-card" className={styles.item}>
           Twitter Card
-        </a>
+        </Link>
       </div>
     </div>
   );

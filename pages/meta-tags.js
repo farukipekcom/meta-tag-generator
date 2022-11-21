@@ -6,6 +6,7 @@ import InputCheckbox from "../components/input-checkbox/input-checkbox";
 import { robots, charset } from "../components/data.js";
 import { useState } from "react";
 import Code from "../components/code/code";
+import Header from "../components/header/header";
 const MetaTags = () => {
   const [form, setForm] = useState({
     charset: "",
@@ -49,47 +50,50 @@ const MetaTags = () => {
   }`;
   return (
     <>
-      <div className={styles.main}>
-        <div className={styles.title}>Meta Tags</div>
-        <div className={styles.form}>
-          <InputText
-            label="Page Title"
-            placeholder="Title must be within 70 Characters"
-            name={"title"}
-            onChange={handleChange}
-          />
-          <Textarea
-            label={"Site Description"}
-            name={"description"}
-            placeholder={"Description must be within 150 Characters"}
-            onChange={handleChange}
-          />
-          <Select
-            label={"Robots"}
-            option={robots}
-            name={"robots"}
-            onChange={handleChange}
-          />
-          <Select
-            label={"Charset"}
-            option={charset}
-            name={"charset"}
-            onChange={handleChange}
-          />
-          <InputText
-            label="Author"
-            placeholder="Enter the name of the page's author"
-            name={"author"}
-            onChange={handleChange}
-          />
-          <InputCheckbox
-            name={"viewport"}
-            label={"Enable viewport if your site is responsive."}
-            onChange={handleChangeCheckbox}
-          />
+      <Header />
+      <div className={styles.page}>
+        <div className={styles.main}>
+          <div className={styles.title}>Meta Tags</div>
+          <div className={styles.form}>
+            <InputText
+              label="Page Title"
+              placeholder="Title must be within 70 Characters"
+              name={"title"}
+              onChange={handleChange}
+            />
+            <Textarea
+              label={"Site Description"}
+              name={"description"}
+              placeholder={"Description must be within 150 Characters"}
+              onChange={handleChange}
+            />
+            <Select
+              label={"Robots"}
+              option={robots}
+              name={"robots"}
+              onChange={handleChange}
+            />
+            <Select
+              label={"Charset"}
+              option={charset}
+              name={"charset"}
+              onChange={handleChange}
+            />
+            <InputText
+              label="Author"
+              placeholder="Enter the name of the page's author"
+              name={"author"}
+              onChange={handleChange}
+            />
+            <InputCheckbox
+              name={"viewport"}
+              label={"Enable viewport if your site is responsive."}
+              onChange={handleChangeCheckbox}
+            />
+          </div>
         </div>
+        <Code data={data} />
       </div>
-      <Code data={data} />
     </>
   );
 };
