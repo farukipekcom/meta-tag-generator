@@ -20,9 +20,9 @@ const Header = () => {
         <Link href="/meta-tags" className={styles.item}>
           Meta Tags
         </Link>
-        <a href="" className={styles.item}>
+        <Link href="/open-graph" className={styles.item}>
           Open Graph
-        </a>
+        </Link>
         <Link href="/twitter-card" className={styles.item}>
           Twitter Card
         </Link>

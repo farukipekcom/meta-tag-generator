@@ -37,82 +37,8 @@ export default function Home() {
         </div>
         <div className={styles.right}>
           <h1 className={styles.title}>Meta Tag Generator</h1>
-          <div className={styles.section}>
-            <InputText
-              label="Page Title"
-              placeholder="Title must be within 70 Characters"
-              name={"title"}
-              onChange={handleChange}
-            />
-            <Textarea
-              label={"Site Description"}
-              name={"description"}
-              placeholder={"Description must be within 150 Characters"}
-              onChange={handleChange}
-            />
-            <Select
-              label={"Robots"}
-              option={robots}
-              name={"robots"}
-              onChange={handleChange}
-            />
-            <Select
-              label={"Charset"}
-              option={charset}
-              name={"charset"}
-              onChange={handleChange}
-            />
-            <InputText
-              label="Author"
-              placeholder="Enter the name of the page's author"
-              name={"author"}
-              onChange={handleChange}
-            />
-            <InputCheckbox
-              name={"viewport"}
-              label={"Enable viewport if your site is responsive."}
-              onChange={handleChangeCheckbox}
-            />
-          </div>
-          <div className={styles.section}>
-            <h2 className={styles.subtitle}>Twitter Card</h2>
-            <Select
-              label={"Twitter Card Type"}
-              option={card_type}
-              name={"card_type"}
-              onChange={handleChange}
-            />
-            <InputText
-              label="Title"
-              placeholder="Title"
-              name={"twitter_title"}
-              onChange={handleChange}
-            />
-            <InputText
-              label="Site (username)"
-              placeholder="The Twitter @username the card should be attributed to."
-              name={"twitter_site"}
-              onChange={handleChange}
-            />
-            <Textarea
-              label={"Description"}
-              name={"twitter_description"}
-              placeholder={"Description must be within 200 Characters"}
-              onChange={handleChange}
-            />
-            <InputText
-              label="Image URL"
-              placeholder="https://"
-              name={"twitter_image"}
-              onChange={handleChange}
-            />
-            <InputText
-              label="Image Alt Text"
-              placeholder="Title"
-              name={"twitter_image_alt_text"}
-              onChange={handleChange}
-            />
-          </div>
+          
+         
           <div className={styles.section}>
             <h2 className={styles.subtitle}>Open Graph</h2>
             <Select
