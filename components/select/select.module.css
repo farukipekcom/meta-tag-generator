@@ -1,24 +1,22 @@
+.item {
+  position: relative;
+}
 .select {
   height: 40px;
-  background-color: white;
   width: 100%;
+  background-color: transparent;
   border: 1px solid var(--bordercolor);
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
-  color: black;
-  margin-top: 6px;
+  letter-spacing: -1%;
+  margin-top: 8px;
   padding-left: 12px;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
-  background-position: 100%;
-  background-repeat: no-repeat;
-  box-shadow: var(--shadow);
 }
 .select::placeholder {
-  color: var(--placeholder);
-  font-weight: 500;
+  color: #fff;
 }
 .select:focus {
   outline: none;
@@ -26,5 +24,11 @@
 .label {
   font-size: 14px;
   font-weight: 600;
-  color: var(--dark);
+}
+.svg {
+  position: absolute;
+  bottom: 16px;
+  right: 12px;
+  fill: white;
+  z-index: 999;
 }

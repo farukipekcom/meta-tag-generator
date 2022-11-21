@@ -1,20 +1,19 @@
 .textarea {
   display: block;
-  background-color: white;
-  width: 100%;
   height: 100px;
+  width: 100%;
+  background-color: transparent;
   border: 1px solid var(--bordercolor);
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
-  color: black;
-  margin-top: 6px;
+  letter-spacing: -1%;
+  margin-top: 8px;
   padding: 12px;
-  box-shadow: var(--shadow);
+  color: #fff;
 }
 .textarea::placeholder {
-  color: var(--placeholder);
-  font-weight: 500;
+  color: #fff;
 }
 .textarea:focus {
   outline: none;
@@ -22,5 +21,4 @@
 .label {
   font-size: 14px;
   font-weight: 600;
-  color: var(--dark);
 }

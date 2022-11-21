@@ -4,6 +4,7 @@
   background-color: var(--dark);
   color: #fff;
   padding: 24px;
+  position: fixed;
 }
 .logo {
   display: flex;

@@ -13,6 +13,7 @@ import {
 } from "../components/data.js";
 import Highlight from "react-highlight";
 import Header from "../components/header/header";
+import MetaTags from "./meta-tags";
 export default function Home() {
   const [form, setForm] = useState({
     charset: "",
@@ -83,6 +84,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <MetaTags />
       {/* <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.logo}>Meta Tag Generator</div>

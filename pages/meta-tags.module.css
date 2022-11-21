@@ -1,0 +1,17 @@
+.main {
+  background-color: var(--background);
+  width: calc(50% - 150px);
+  height: 100vh;
+  margin-left: 300px;
+  padding: 24px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 24px;
+}
