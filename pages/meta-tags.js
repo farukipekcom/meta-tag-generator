@@ -1,4 +1,3 @@
-import Header from "../components/header/header";
 import styles from "./meta-tags.module.css";
 import InputText from "../components/input-text/input-text";
 import Select from "../components/select/select";
@@ -6,6 +5,7 @@ import Textarea from "../components/textare/textarea";
 import InputCheckbox from "../components/input-checkbox/input-checkbox";
 import { robots, charset } from "../components/data.js";
 import { useState } from "react";
+import Code from "../components/code/code";
 const MetaTags = () => {
   const [form, setForm] = useState({
     charset: "",
@@ -27,9 +27,9 @@ const MetaTags = () => {
   const handleChangeCheckbox = (event) => {
     setForm({ ...form, [event.target.name]: event.target.checked });
   };
+
   return (
     <>
-      <Header />
       <div className={styles.main}>
         <div className={styles.title}>Meta Tags</div>
         <div className={styles.form}>
@@ -70,6 +70,7 @@ const MetaTags = () => {
           />
         </div>
       </div>
+      <Code form={form} />
     </>
   );
 };

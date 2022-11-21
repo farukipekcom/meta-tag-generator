@@ -11,7 +11,6 @@ import {
   op_type,
   op_locale,
 } from "../components/data.js";
-import Highlight from "react-highlight";
 import Header from "../components/header/header";
 import MetaTags from "./meta-tags";
 export default function Home() {
@@ -84,7 +83,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <MetaTags />
+      <div className={styles.main}>
+        <MetaTags />
+      </div>
       {/* <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.logo}>Meta Tag Generator</div>
