@@ -43,3 +43,9 @@
   display: flex;
   width: 100%;
 }
+.red {
+  color: red !important;
+}
+.orange {
+  color: orange;
+}
