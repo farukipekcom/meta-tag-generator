@@ -1,10 +1,9 @@
 import styles from "./select.module.css";
-const Select = ({ label, option, name, onChange }) => {
+import Label from "../label/label";
+const Select = ({ label, option, name, onChange, length, max, info }) => {
   return (
     <div className={styles.item}>
-      <label htmlFor={name} className={styles.label}>
-        {label}
-      </label>
+      <Label name={name} label={label} max={max} length={length} info={info} />
       <select
         name={name}
         id={name}

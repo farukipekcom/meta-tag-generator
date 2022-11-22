@@ -1,10 +1,17 @@
 import styles from "./textarea.module.css";
-const Textarea = ({ label, placeholder, name, onChange }) => {
+import Label from "../label/label";
+const Textarea = ({
+  label,
+  placeholder,
+  name,
+  onChange,
+  length,
+  max,
+  info,
+}) => {
   return (
     <div className={styles.item}>
-      <label htmlFor={name} className={styles.label}>
-        {label}
-      </label>
+      <Label name={name} label={label} max={max} length={length} info={info} />
       <textarea
         name={name}
         id={name}

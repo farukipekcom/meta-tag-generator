@@ -1,7 +1,7 @@
 import styles from "./open-graph.module.css";
 import InputText from "../components/input-text/input-text";
 import Select from "../components/select/select";
-import Textarea from "../components/textare/textarea";
+import Textarea from "../components/textarea/textarea";
 import { useState } from "react";
 import { op_type, op_locale } from "../components/data.js";
 import Code from "../components/code/code";

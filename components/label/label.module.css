@@ -1,0 +1,45 @@
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.label > span {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  fill: var(--bordercolor);
+  width: 32px;
+  padding-right: 8px;
+}
+.info {
+  position: relative;
+}
+.info:hover > .goster {
+  display: flex;
+}
+.goster {
+  display: none;
+  position: absolute;
+  left: 24px;
+  bottom: 4px;
+  background-color: #ffffff;
+  color: var(--dark);
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2em;
+  border-radius: 4px;
+  width: 400px;
+  min-width: 280px;
+}
+.limit {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.heading {
+  display: flex;
+  width: 100%;
+}

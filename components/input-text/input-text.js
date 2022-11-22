@@ -1,10 +1,18 @@
 import styles from "./input-text.module.css";
-const InputText = ({ label, type = "text", placeholder, name, onChange }) => {
+import Label from "../label/label";
+const InputText = ({
+  label,
+  type = "text",
+  placeholder,
+  name,
+  onChange,
+  length,
+  max,
+  info,
+}) => {
   return (
     <div className={styles.item}>
-      <label htmlFor={name} className={styles.label}>
-        {label}
-      </label>
+      <Label name={name} label={label} max={max} length={length} info={info} />
       <input
         type={type}
         id={name}
