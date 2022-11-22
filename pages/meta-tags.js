@@ -8,7 +8,6 @@ import { useState } from "react";
 import Code from "../components/code/code";
 import Header from "../components/header/header";
 const MetaTags = () => {
-  const [titleLength, setTitleLength] = useState();
   const [form, setForm] = useState({
     charset: "",
     title: "",
@@ -17,12 +16,6 @@ const MetaTags = () => {
     author: "",
     viewport: "",
     revisit: "",
-    card_type: "",
-    twitter_title: "",
-    twitter_site: "",
-    twitter_description: "",
-    twitter_image: "",
-    twitter_image_alt_text: "",
   });
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -31,7 +24,13 @@ const MetaTags = () => {
     setForm({ ...form, [event.target.name]: event.target.checked });
   };
   const data = `${
-    form.title.length > 0 ? `<title>${form.title}</title>` + `\n` : ``
+    (form.charset.length > 0) & (form.charset !== "-- Select --")
+      ? `<meta charset="${form.charset}">` + `\n`
+      : ``
+  }${
+    form.title.length > 0
+      ? `<meta name="title" content="${form.title}">` + `\n`
+      : ``
   }${
     form.description.length > 0
       ? `<meta name="description" content="${form.description}">` + `\n`
@@ -40,18 +39,18 @@ const MetaTags = () => {
     (form.robots.length > 0) & (form.robots !== "-- Select --")
       ? `<meta name="robots" content="${form.robots}">` + `\n`
       : ``
-  }${form.charset.length > 0 ? `<meta charset="${form.charset}">` + `\n` : ``}${
+  }${
     form.author.length > 0
       ? `<meta name="author" content="${form.author}">` + `\n`
+      : ``
+  }${
+    form.revisit.length > 0
+      ? `<meta name="revisit-after" content="${form.revisit} days" />` + `\n`
       : ``
   }${
     form.viewport === true
       ? `<meta name="viewport" content="width=device-width, initial-scale=1">` +
         `\n`
-      : ``
-  }${
-    form.revisit.length > 0
-      ? `<meta name="revisit-after" content="${form.revisit} days" />` + `\n`
       : ``
   }`;
   return (
@@ -62,7 +61,7 @@ const MetaTags = () => {
           <div className={styles.title}>Meta Tags</div>
           <div className={styles.form}>
             <InputText
-              label="Page Title"
+              label="Title"
               placeholder="Title must be within 60 Characters"
               name={"title"}
               onChange={handleChange}
@@ -73,7 +72,7 @@ const MetaTags = () => {
               }
             />
             <Textarea
-              label={"Site Description"}
+              label={"Description"}
               name={"description"}
               placeholder={"Description must be within 160 Characters"}
               onChange={handleChange}
@@ -97,29 +96,33 @@ const MetaTags = () => {
               option={charset}
               name={"charset"}
               onChange={handleChange}
+              info={
+                "The charset attribute on a meta tag specifies to the browser what character encoding to use for the page."
+              }
             />
             <InputText
               label="Author"
               placeholder="Enter the name of the page's author"
               name={"author"}
               onChange={handleChange}
+              info={
+                "Name of the author who created the page or article/website. (e.g., John Doe)"
+              }
             />
-            <InputCheckbox
-              name={"viewport"}
-              label={"Enable viewport if your site is responsive."}
-              onChange={handleChangeCheckbox}
-            />
-            -----
-            <br />
             <InputText
               label="Revisit"
-              placeholder="Search engines should revisit this page after"
+              placeholder="Search engines should revisit this page after (days)"
               name={"revisit"}
               onChange={handleChange}
               type={"number"}
               info={
                 "The Revisit tag would tell the spider of a search engine to come back to your website and index it again. "
               }
+            />
+            <InputCheckbox
+              name={"viewport"}
+              label={"Enable viewport if your site is responsive."}
+              onChange={handleChangeCheckbox}
             />
           </div>
         </div>
