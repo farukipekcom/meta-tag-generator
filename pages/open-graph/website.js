@@ -1,8 +1,6 @@
 import InputText from "../../components/input-text/input-text";
-import Select from "../../components/select/select";
 import Textarea from "../../components/textarea/textarea";
 import { useState } from "react";
-import { op_locale } from "../../components/data.js";
 import Code from "../../components/code/code";
 import Header from "../../components/header/header";
 const Website = () => {
@@ -14,7 +12,6 @@ const Website = () => {
     op_image_width: "",
     op_image_height: "",
     op_image_alt: "",
-    op_locale: "",
   });
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -69,7 +66,7 @@ const Website = () => {
               name={"op_description"}
               placeholder={"Description must be within 200 Characters"}
               onChange={handleChange}
-              length={form.op_description}
+              length={form.op_description.length}
               max="200"
               info="Recommend that you do not go beyond the limit of 200 characters."
             />
