@@ -39,3 +39,30 @@
   background-color: var(--hover);
   transition: background-color 0.2s;
 }
+.dropdown {
+  display: none;
+  position: relative;
+}
+
+.item + .dropdown {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid var(--bordercolor);
+}
+.item + .dropdown > .item::before {
+  background-color: var(--bordercolor);
+  position: absolute;
+  left: 0px;
+  content: "";
+  width: 16px;
+  height: 1px;
+}
+.svg {
+  margin-left: auto;
+}
+.dropdown > .item {
+  font-size: 14px;
+  font-weight: 400;
+}
