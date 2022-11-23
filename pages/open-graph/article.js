@@ -9,9 +9,11 @@ const Website = () => {
     op_description: "",
     op_url: "",
     op_image_url: "",
-    op_image_width: "",
-    op_image_height: "",
     op_image_alt: "",
+    op_author: "",
+    op_section: "",
+    op_published_time: "",
+    op_modified_time: "",
   });
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -34,18 +36,26 @@ const Website = () => {
       ? `<meta property="og:image" content="${form.op_image_url}">` + `\n`
       : ``
   }${
-    form.op_image_width.length > 0
-      ? `<meta property="og:image:width" content="${form.op_image_width}">` +
-        `\n`
-      : ``
-  }${
-    form.op_image_height.length > 0
-      ? `<meta property="og:image:height" content="${form.op_image_height}">` +
-        `\n`
-      : ``
-  }${
     form.op_image_alt.length > 0
       ? `<meta property="og:image:alt" content="${form.op_image_alt}">` + `\n`
+      : ``
+  }${
+    form.op_author.length > 0
+      ? `<meta property="article:author" content="${form.op_author}">` + `\n`
+      : ``
+  }${
+    form.op_section.length > 0
+      ? `<meta property="article:section" content="${form.op_section}">` + `\n`
+      : ``
+  }${
+    form.op_published_time.length > 0
+      ? `<meta property="article:published_time" content="${form.op_published_time}">` +
+        `\n`
+      : ``
+  }${
+    form.op_modified_time.length > 0
+      ? `<meta property="article:modified_time" content="${form.op_modified_time}">` +
+        `\n`
       : ``
   }`;
   return (
@@ -53,7 +63,7 @@ const Website = () => {
       <Header />
       <div className="main">
         <div className="container">
-          <div className="main-title">Open Graph - Website</div>
+          <div className="main-title">Open Graph - Article</div>
           <div className="form">
             <InputText
               label="Title"
@@ -85,27 +95,37 @@ const Website = () => {
               info="An image URL which should represent your object within the graph."
             />
             <InputText
-              type="number"
-              label="Width"
-              placeholder=""
-              name={"op_image_width"}
-              onChange={handleChange}
-              info="Use og:image:width and og:image:height Open Graph tags to specify the image dimensions to the crawler so that it can render the image immediately without having to asynchronously download and process it."
-            />
-            <InputText
-              type="number"
-              label="Height"
-              placeholder=""
-              name={"op_image_height"}
-              onChange={handleChange}
-              info="Use og:image:width and og:image:height Open Graph tags to specify the image dimensions to the crawler so that it can render the image immediately without having to asynchronously download and process it."
-            />
-            <Textarea
               label={"Image Alt Text"}
               name={"op_image_alt"}
               placeholder={""}
               onChange={handleChange}
               info="A description of what is in the image (not a caption)."
+            />
+            <InputText
+              label="Author"
+              placeholder="Writers of the article"
+              name={"op_author"}
+              onChange={handleChange}
+            />
+            <InputText
+              label="Section"
+              placeholder="E.g. Technology"
+              name={"op_section"}
+              onChange={handleChange}
+            />
+            <InputText
+              type="datetime-local"
+              label="Published Time"
+              name={"op_published_time"}
+              onChange={handleChange}
+              info="When the article was first published."
+            />
+            <InputText
+              type="datetime-local"
+              label="Modified Time"
+              name={"op_modified_time"}
+              onChange={handleChange}
+              info="When the article was last changed."
             />
           </div>
         </div>
