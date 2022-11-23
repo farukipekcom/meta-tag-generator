@@ -15,4 +15,33 @@
   padding: 16px;
   margin-top: 24px;
   min-height: 100px;
+  position: relative;
+}
+.copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  color: #3c72fd;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.copy:hover {
+  color: greenyellow;
+}
+.copied {
+  /* background-color: #070a11; */
+}
+.message {
+  font-size: 0.875em;
+  font-weight: 600;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--bordercolor);
+  color: var(--background);
+  padding: 4px 8px;
+  border-radius: 4px;
 }
