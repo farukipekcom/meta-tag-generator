@@ -25,9 +25,39 @@ const Header = () => {
         <Link href="/meta-tags" className={styles.item}>
           Meta Tags
         </Link>
-        <Link href="/open-graph" className={styles.item}>
+        <div className={`${styles.item}`} onClick={onClick}>
           Open Graph
-        </Link>
+          <svg
+            width="14"
+            height="8"
+            viewBox="0 0 14 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={styles.svg}
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.5421 0L6.98282 5.19016L1.38969 0.0330012L0 1.38829L6.94924 8L14 1.42129L12.5421 0Z"
+              fill="#D1D5DB"
+            />
+          </svg>
+        </div>
+        {menu === true ? (
+          <div className={styles.dropdown}>
+            <Link href="/open-graph/article" className={styles.item}>
+              Article
+            </Link>
+            <Link href="/open-graph/product" className={styles.item}>
+              Product
+            </Link>
+            <Link href="/open-graph/website" className={styles.item}>
+              Website
+            </Link>
+          </div>
+        ) : (
+          ""
+        )}
         <div className={`${styles.item}`} onClick={onClick}>
           Twitter Card
           <svg
