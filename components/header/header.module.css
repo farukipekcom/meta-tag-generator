@@ -34,6 +34,7 @@
   padding-left: 12px;
   padding-right: 12px;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 .item:hover {
   background-color: var(--hover);

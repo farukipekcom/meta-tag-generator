@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import { useState } from "react";
 const Header = () => {
   const [menu, setMenu] = useState(false);
-  const deneme = () => {
+  const onClick = () => {
     setMenu(!menu);
   };
   return (
@@ -28,8 +28,8 @@ const Header = () => {
         <Link href="/open-graph" className={styles.item}>
           Open Graph
         </Link>
-        <div className={`${styles.item}`} onClick={deneme}>
-          <Link href="/twitter-card">Twitter Card</Link>
+        <div className={`${styles.item}`} onClick={onClick}>
+          Twitter Card
           <svg
             width="14"
             height="8"
