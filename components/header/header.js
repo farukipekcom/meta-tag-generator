@@ -46,20 +46,19 @@ const Header = () => {
             />
           </svg>
         </div>
-
         {menu === true ? (
           <div className={styles.dropdown}>
-            <Link href="/twitter-app" className={styles.item}>
+            <Link href="twitter-card/app" className={styles.item}>
               App
             </Link>
-            <Link href="/twitter-player" className={styles.item}>
+            <Link href="twitter-card/player" className={styles.item}>
               Player
             </Link>
-            <Link href="/twitter-summary" className={styles.item}>
+            <Link href="twitter-card/summary" className={styles.item}>
               Summary
             </Link>
             <Link
-              href="/twitter-summary-with-large-image"
+              href="twitter-card/summary-with-large-image"
               className={styles.item}
             >
               Summary with Large Image
