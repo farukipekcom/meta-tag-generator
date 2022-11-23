@@ -1,4 +1,3 @@
-import styles from "./meta-tags.module.css";
 import InputText from "../components/input-text/input-text";
 import Select from "../components/select/select";
 import Textarea from "../components/textarea/textarea";
@@ -56,10 +55,10 @@ const MetaTags = () => {
   return (
     <>
       <Header />
-      <div className={styles.page}>
-        <div className={styles.main}>
-          <div className={styles.title}>Meta Tags</div>
-          <div className={styles.form}>
+      <div className="main">
+        <div className="container">
+          <div className="main-title">Meta Tags</div>
+          <div className="form">
             <InputText
               label="Title"
               placeholder="Title must be within 60 Characters"

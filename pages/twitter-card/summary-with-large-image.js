@@ -1,9 +1,6 @@
-import styles from "./summary-with-large-image.module.css";
 import InputText from "../../components/input-text/input-text";
-import Select from "../../components/select/select";
 import Textarea from "../../components/textarea/textarea";
 import { useState } from "react";
-import { card_type } from "../../components/data.js";
 import Code from "../../components/code/code";
 import Header from "../../components/header/header";
 const SummaryWithLargeImage = () => {
@@ -43,10 +40,12 @@ const SummaryWithLargeImage = () => {
   return (
     <>
       <Header />
-      <div className={styles.page}>
-        <div className={styles.main}>
-          <div className={styles.title}>Twitter Card</div>
-          <div className={styles.form}>
+      <div className="main">
+        <div className="container">
+          <div className="main-title">
+            Twitter Card - Summary Summary With Large Image
+          </div>
+          <div className="form">
             <InputText
               label="Title"
               placeholder="Title"

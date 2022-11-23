@@ -1,4 +1,3 @@
-import styles from "./open-graph.module.css";
 import InputText from "../components/input-text/input-text";
 import Select from "../components/select/select";
 import Textarea from "../components/textarea/textarea";
@@ -8,18 +7,6 @@ import Code from "../components/code/code";
 import Header from "../components/header/header";
 const OpenGraph = () => {
   const [form, setForm] = useState({
-    charset: "",
-    title: "",
-    description: "",
-    robots: "",
-    author: "",
-    viewport: "",
-    card_type: "",
-    twitter_title: "",
-    twitter_site: "",
-    twitter_description: "",
-    twitter_image: "",
-    twitter_image_alt_text: "",
     op_type: "",
     op_title: "",
     op_description: "",
@@ -59,10 +46,10 @@ const OpenGraph = () => {
   return (
     <>
       <Header />
-      <div className={styles.page}>
-        <div className={styles.main}>
-          <div className={styles.title}>Open Graph</div>
-          <div className={styles.form}>
+      <div className="main">
+        <div className="container">
+          <div className="main-title">Open Graph</div>
+          <div className="form">
             <Select
               label={"Open Graph Type"}
               option={op_type}
