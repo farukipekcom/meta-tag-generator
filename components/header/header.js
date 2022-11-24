@@ -2,13 +2,17 @@ import Link from "next/link";
 import styles from "./header.module.css";
 import { useState } from "react";
 const Header = () => {
-  const [menu, setMenu] = useState(false);
-  const onClick = () => {
-    setMenu(!menu);
+  const [opengraphdropdown, setOpengraphdropdown] = useState(false);
+  const [twitterDropdown, setTwitterDropdown] = useState(false);
+  const onClickOpenGraph = () => {
+    setOpengraphdropdown(!opengraphdropdown);
+  };
+  const onClickTwitter = () => {
+    setTwitterDropdown(!twitterDropdown);
   };
   return (
     <div className={styles.header}>
-      <div className={styles.logo}>
+      <Link href="/" className={styles.logo}>
         <svg
           width="36"
           height="36"
@@ -20,12 +24,12 @@ const Header = () => {
           <rect x="10" y="10" width="16" height="16" rx="6" fill="#111825" />
         </svg>
         <span className={styles.title}>Meta Tags Generator</span>
-      </div>
+      </Link>
       <div className={styles.menu}>
         <Link href="/meta-tags" className={styles.item}>
           Meta Tags
         </Link>
-        <div className={`${styles.item}`} onClick={onClick}>
+        <div className={`${styles.item}`} onClick={onClickOpenGraph}>
           Open Graph
           <svg
             width="14"
@@ -43,7 +47,7 @@ const Header = () => {
             />
           </svg>
         </div>
-        {menu === true ? (
+        {opengraphdropdown === true ? (
           <div className={styles.dropdown}>
             <Link href="/open-graph/article" className={styles.item}>
               Article
@@ -58,7 +62,7 @@ const Header = () => {
         ) : (
           ""
         )}
-        <div className={`${styles.item}`} onClick={onClick}>
+        <div className={`${styles.item}`} onClick={onClickTwitter}>
           Twitter Card
           <svg
             width="14"
@@ -76,7 +80,7 @@ const Header = () => {
             />
           </svg>
         </div>
-        {menu === true ? (
+        {twitterDropdown === true ? (
           <div className={styles.dropdown}>
             <Link href="/twitter-card/app" className={styles.item}>
               App
