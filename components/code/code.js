@@ -1,5 +1,5 @@
 import Highlight from "react-highlight";
-import styles from "./code.module.css";
+import styles from "./code.module.scss";
 import { useState } from "react";
 const Code = ({ data }) => {
   const [message, setMessage] = useState();

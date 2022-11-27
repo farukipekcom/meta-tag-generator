@@ -1,5 +1,5 @@
 import InputText from "../components/input-text/input-text";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import Select from "../components/select/select";
 import Textarea from "../components/textarea/textarea";
 import InputCheckbox from "../components/input-checkbox/input-checkbox";

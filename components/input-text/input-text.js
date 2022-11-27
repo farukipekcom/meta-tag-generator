@@ -1,4 +1,4 @@
-import styles from "./input-text.module.css";
+import styles from "./input-text.module.scss";
 import Label from "../label/label";
 const InputText = ({
   label,

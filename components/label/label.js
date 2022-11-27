@@ -1,4 +1,4 @@
-import styles from "./label.module.css";
+import styles from "./label.module.scss";
 const Label = ({ name, label, max, length, info = "" }) => {
   return (
     <div className={styles.heading}>

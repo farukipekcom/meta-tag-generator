@@ -1,4 +1,4 @@
-import styles from "./textarea.module.css";
+import styles from "./textarea.module.scss";
 import Label from "../label/label";
 const Textarea = ({
   label,

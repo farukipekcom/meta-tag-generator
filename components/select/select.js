@@ -1,4 +1,4 @@
-import styles from "./select.module.css";
+import styles from "./select.module.scss";
 import Label from "../label/label";
 const Select = ({ label, option, name, onChange, length, max, info }) => {
   return (
