@@ -1,11 +1,16 @@
 @import "../../styles/_main.scss";
 .header {
-  width: 300px;
-  height: 100vh;
   background-color: var(--dark);
   color: #fff;
   padding: 24px;
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  @include mq("tablet") {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+  }
 }
 .logo {
   display: flex;
@@ -19,10 +24,13 @@
 }
 
 .menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 8px;
   margin-top: 32px;
+  @include mq("tablet") {
+    display: flex;
+  }
 }
 .item {
   width: 100%;
@@ -67,4 +75,17 @@
 .dropdown > .item {
   font-size: 14px;
   font-weight: 400;
+}
+.mobileMenu {
+  display: flex;
+}
+.icon {
+  fill: white;
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  @include mq("tablet") {
+    display: none;
+  }
 }

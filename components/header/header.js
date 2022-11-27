@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styles from "./header.module.scss";
 import { useState } from "react";
+import Menu from "../icons/menu";
 const Header = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
   const [opengraphdropdown, setOpengraphdropdown] = useState(false);
   const [twitterDropdown, setTwitterDropdown] = useState(false);
   const onClickOpenGraph = () => {
@@ -9,6 +11,9 @@ const Header = () => {
   };
   const onClickTwitter = () => {
     setTwitterDropdown(!twitterDropdown);
+  };
+  const onClickMenu = () => {
+    setMobileMenu(!mobileMenu);
   };
   return (
     <div className={styles.header}>
@@ -25,7 +30,14 @@ const Header = () => {
         </svg>
         <span className={styles.title}>Meta Tags Generator</span>
       </Link>
-      <div className={styles.menu}>
+      <div className={styles.icon} onClick={onClickMenu}>
+        <Menu />
+      </div>
+      <div
+        className={`${styles.menu} ${
+          mobileMenu === true ? styles.mobileMenu : ""
+        }`}
+      >
         <Link href="/meta-tags" className={styles.item}>
           Meta Tags
         </Link>
