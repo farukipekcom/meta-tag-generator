@@ -52,6 +52,9 @@ const Header = () => {
             <Link href="/open-graph/article" className={styles.item}>
               Article
             </Link>
+            <Link href="/open-graph/profile" className={styles.item}>
+              Profile
+            </Link>
             <Link href="/open-graph/product" className={styles.item}>
               Product
             </Link>
