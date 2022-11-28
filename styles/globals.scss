@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-
+@import "_main.scss";
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  background-color: var(--background);
 }
 
 a {
@@ -153,19 +154,34 @@ pre {
 /* -------------------------------- */
 
 .main {
-  display: flex;
   width: 100%;
+  padding-top: 84px;
+  @include mq("tablet") {
+    padding-top: 0px;
+  }
+  @include mq("desktop") {
+    padding-top: 0px;
+    display: flex;
+  }
 }
 .container {
   background-color: var(--background);
   min-width: calc(50% - 150px);
-  height: 100vh;
-  margin-left: 300px;
   padding: 24px;
+  @include mq("tablet") {
+    margin-left: 300px;
+  }
+  @include mq("desktop") {
+    height: 100vh;
+  }
 }
 .main-title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
+  @include mq("desktop") {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 .form {
   display: flex;

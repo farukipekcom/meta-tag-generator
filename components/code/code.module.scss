@@ -2,9 +2,15 @@
 .main {
   background-color: var(--background);
   min-width: calc(50% - 150px);
-  height: 100vh;
   padding: 24px;
-  border-left: 1px solid var(--hover);
+  @include mq("tablet") {
+    margin-left: 300px;
+  }
+  @include mq("desktop") {
+    margin-left: 0px;
+    height: 100vh;
+    border-left: 1px solid var(--hover);
+  }
 }
 .title {
   font-size: 24px;
